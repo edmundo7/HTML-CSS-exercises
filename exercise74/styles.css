@@ -1,0 +1,64 @@
+@import url("../reset.css");
+
+/* * {
+  outline: 1px solid red;
+} */
+
+body, html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  align-items: center;
+  background-color: lightcoral;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+}
+
+footer {
+  background-color: lightseagreen;
+  height: 100px;
+  width: 100%;
+}
+
+main {
+  --columns: 9;
+  --columnGap: 0%;
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+}
+
+section, aside {
+  height: 100%;
+  --initialFlexBasis: calc((var(--width) / var(--columns)) * 100%);
+  --contributionToGap: calc(((var(--columns) - var(--width)) / var(--columns)) * var(--columnGap));
+  flex: 0 0 calc(var(--initialFlexBasis) - var(--contributionToGap));
+}
+
+section {
+  --width: 4;
+}
+
+aside {
+  --width: 1;
+  background-color: yellowgreen;
+}
+
+section:nth-child(1) {
+  background-color: aquamarine;
+}
+
+section:nth-child(2) {
+  background-color: limegreen;
+}

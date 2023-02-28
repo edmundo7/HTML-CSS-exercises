@@ -1,0 +1,125 @@
+@import url("../reset.css");
+
+/* * {
+  outline: 1px solid red;
+} */
+
+* {
+  box-sizing: border-box;
+}
+
+.options {
+  column-gap: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper {
+  --columns: 12;
+  --columnGap: 0%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+html, body {
+  height: 100%;
+}
+
+div[id^="nav-"] {
+  display: none;
+}
+
+main, nav {
+  --initialBasis: calc((var(--width) / var(--columns)) * 100%);
+  --gapContribution: calc(((var(--columns) - var(--width)) / var(--columns)) * var(--columnGap));
+  flex: 0 0 calc(var(--initialBasis) - var(--gapContribution));
+}
+
+main {
+  --width: 12;
+  background-color: beige;
+}
+
+nav {
+  --width: 12;
+  background-color: brown;
+}
+
+nav ul {
+  display: flex;
+}
+
+li {
+  border-bottom: 0.5px solid white;
+  color: white;
+  text-align: center;
+}
+
+li ul {
+  display: none;
+}
+
+nav li:not(li li) {
+  flex: 0.75 0 0;
+  left: 0;
+  position: relative;
+  top: 0;
+}
+
+:checked + ul {
+  background-color: brown;
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+
+li li {
+  text-align: right;
+}
+
+
+
+
+
+
+
+#nav-left:target ~ nav {
+  --width: 3;
+}
+
+#nav-left:target ~ nav ul:not(ul ul) {
+  flex-direction: column;
+}
+
+#nav-left:target ~ nav ul ul {
+  position: static;
+}
+
+#nav-left:target ~ main {
+  --width: 9;
+}
+
+
+
+
+
+
+
+#nav-right:target ~ nav {
+  --width: 3;
+  order: 1;
+}
+
+#nav-right:target ~ nav ul:not(ul ul) {
+  flex-direction: column;
+}
+
+#nav-right:target ~ nav ul ul {
+  position: static;
+}
+
+#nav-right:target ~ main {
+  --width: 9;
+  order: 0;
+}

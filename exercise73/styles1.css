@@ -1,0 +1,32 @@
+@import url("../reset.css");
+
+/* * {
+  outline: 1px solid red;
+} */
+
+ul {
+  display: flex;
+  margin: auto;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  width: 500px;
+}
+
+li {
+  flex: 0 0 auto;
+  height: 300px;
+  scroll-snap-align: start;
+  width: 500px;
+}
+
+li:nth-child(1) {
+  background-color: blue;
+}
+
+li:nth-child(2) {
+  background-color: red;
+}
+
+li:nth-child(3) {
+  background-color: green;
+}

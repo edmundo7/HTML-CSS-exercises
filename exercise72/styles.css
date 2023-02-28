@@ -1,0 +1,70 @@
+@import url("../reset.css");
+
+/* * {
+  outline: 1px solid red;
+} */
+
+body {
+  background-color: lightseagreen;
+  padding: 50px 0;
+}
+
+.star-rating {
+  align-items: center;
+  width: 60px;
+  margin: auto;
+}
+
+.star-sprite {
+  background-image: url("starSprite.png");
+  background-repeat: no-repeat;
+  height: 15px;
+  width: 60px;
+}
+
+a {
+  display: block;
+  float: left;
+  height: 15px;
+  width: 12px;
+}
+
+#one-star:target ~ .star-sprite {
+  background-position: -48px;
+}
+
+#two-stars:target ~ .star-sprite {
+  background-position: -36px;
+}
+
+#three-stars:target ~ .star-sprite {
+  background-position: -24px;
+}
+
+#four-stars:target ~ .star-sprite {
+  background-position: -12px;
+}
+
+#five-stars:target ~ .star-sprite {
+  background-position: 0px;
+}
+
+#one-star-selection:hover ~ .star-sprite {
+  background-position: -48px;
+}
+
+#two-star-selection:hover ~ .star-sprite {
+  background-position: -36px;
+}
+
+#three-star-selection:hover ~ .star-sprite {
+  background-position: -24px;
+}
+
+#four-star-selection:hover ~ .star-sprite {
+  background-position: -12px;
+}
+
+#five-star-selection:hover ~ .star-sprite {
+  background-position: 0px;
+}

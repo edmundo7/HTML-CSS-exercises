@@ -1,0 +1,30 @@
+@import url("../reset.css");
+
+/* * {
+  outline: 1px solid red;
+} */
+
+body {
+  padding: 100px;
+}
+
+div {
+  box-sizing: border-box;
+  color: white;
+  display: inline-block;
+  height: 150px;
+  padding: 50px;
+  text-align: center;
+  vertical-align: top;
+  width: 50%;
+}
+
+.one {
+  background-color: blue;
+  border: 20px solid yellow;
+}
+
+.two {
+  background-color: green;
+  border: 10px solid orange
+}

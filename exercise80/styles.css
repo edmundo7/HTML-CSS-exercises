@@ -1,0 +1,38 @@
+@import url("../reset.css");
+
+/* * {
+  outline: 1px solid red;
+} */
+
+
+body {
+  padding: 100px;
+}
+
+.container {
+  display: flex;
+}
+
+.one {
+  background-color: aquamarine;
+}
+
+.two {
+  background-color: lightgreen;
+}
+
+.three {
+  background-color:  lightsalmon;
+}
+
+.two p {
+  width: 80%;
+}
+
+div div {
+  align-items: center;
+  display: flex;
+  flex: 1 0 0;
+  height: 300px;
+  justify-content: center;
+}
